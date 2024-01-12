@@ -1634,7 +1634,7 @@ fn video_filter(
         .input("out", 0)
         .unwrap()
         .parse(&format!(
-            "crop={roi_w}:{roi_h}:{roi_x}:{roi_y}:exact=1,scale_vaapi=format={output_real_pixfmt_name}:w={enc_w}:h={enc_h}{}",
+            "crop={roi_w}:{roi_h}:{roi_x}:{roi_y}:exact=0,scale_vaapi=format={output_real_pixfmt_name}:w={enc_w}:h={enc_h}{}",
             if let EncodePixelFormat::Vaapi(_) = pix_fmt {
                 ""
             } else {
